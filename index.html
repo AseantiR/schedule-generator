@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Schedule Generator: Phase 1 & 2</title>
+  <link rel="stylesheet" href="schedule.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Schedule Generator: Phase 1 & 2</h1>
+
+    <div class="buttons">
+      <button id="randomAssignBtn">Random Assign</button>
+      <button id="saveBtn">Save Schedule</button>
+      <button id="downloadPdfBtn">Download PDF</button>
+      <button id="resetBtn">Reset Schedule</button>
+    </div>
+
+    <div class="main-content">
+      <div class="associates-container">
+        <h2>Associates</h2>
+        <ul id="associatesList" class="draggable-list" aria-label="Associates List"></ul>
+      </div>
+
+      <div class="workareas-container">
+        <div class="phase">
+          <h2>Phase 1</h2>
+          <ul id="phase1List" class="droppable-list"></ul>
+        </div>
+
+        <div class="phase">
+          <h2>Phase 2</h2>
+          <ul id="phase2List" class="droppable-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jsPDF library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="schedule.js"></script>
+</body>
+</html>

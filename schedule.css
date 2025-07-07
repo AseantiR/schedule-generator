@@ -1,0 +1,167 @@
+/* Basic resets and font */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+.assigned-checkmark {
+  color: green;
+  font-weight: bold;
+  margin-left: 6px;
+  user-select: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e40af;
+}
+
+.buttons {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.buttons button {
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #1e40af;
+}
+
+.main-content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.associates-container,
+.workareas-container {
+  flex: 1;
+}
+
+.associates-container {
+  max-width: 200px;
+}
+
+h2 {
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  color: #2563eb;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f9fafb;
+}
+
+.associate-item,
+.workarea-item {
+  padding: 10px 12px;
+  margin: 4px 10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.associate-item.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.workarea-item {
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: default;
+}
+
+.workarea-name {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1e40af;
+}
+
+.assigned-associate {
+  font-style: italic;
+  color: #6b7280;
+  margin-bottom: 8px;
+  user-select: text;
+}
+
+.remove-btn {
+  background-color: #ef4444;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Scrollbar styling for better UX */
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .associates-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
